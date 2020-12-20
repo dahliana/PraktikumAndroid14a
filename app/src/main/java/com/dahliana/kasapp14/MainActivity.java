@@ -1,5 +1,6 @@
 package com.dahliana.kasapp14;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -28,9 +29,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast pesan = Toast.makeText(MainActivity.this, "Selamat Belajar Android Studio", Toast.LENGTH_SHORT);
-                pesan.setGravity(Gravity.CENTER, 0, 0);
-                pesan.show();
+                startActivity(new Intent(MainActivity.this, AddActivity.class));
             }
         });
     }
